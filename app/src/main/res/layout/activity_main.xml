@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtA"
+        android:inputType="numberDecimal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Number A"/>
+
+    <EditText
+        android:id="@+id/edtB"
+        android:inputType="numberDecimal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:imeOptions="actionDone"
+        app:layout_constraintTop_toBottomOf="@id/edtA"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Number B"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtB"
+        android:layout_marginTop="16dp"
+        android:text="Result"
+        android:background="@drawable/border"
+        android:textSize="24sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="+"
+        android:onClick="plus"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@id/btnMinus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="-"
+        android:onClick="minus"
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@id/btnMul"
+        app:layout_constraintLeft_toRightOf="@id/btnPlus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="x"
+        android:onClick="mul"
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/holo_green_light"
+        app:layout_constraintRight_toLeftOf="@id/btnDiv"
+        app:layout_constraintLeft_toRightOf="@id/btnMinus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=":"
+        android:onClick="div"
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/darker_gray"
+        app:layout_constraintLeft_toRightOf="@id/btnMul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnMod"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="mod"
+        android:text="a % b"
+        app:layout_constraintLeft_toLeftOf="@id/btnPlus"
+        app:layout_constraintBottom_toTopOf="@id/btnPlus"/>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="pow"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintRight_toRightOf="@id/btnDiv"
+        app:layout_constraintBottom_toTopOf="@id/btnDiv"
+        android:text="a ^ b"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
